@@ -4,15 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Enum
+namespace Domain.Workout
 {
-    public enum BodyPart
+    public class PersonaliseerdeWorkout : Workout
     {
-        CHEST,
-        BICEPS,
-        TRICEPS,
-        LEGS,
-        BACK,
-        CORE
+        public Gebruiker.Gebruiker Gebruiker { get; set; }
     }
 }

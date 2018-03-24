@@ -1,0 +1,56 @@
+﻿@model PrimeFitness.Models.AddWorkoutViewModel
+
+@{
+    ViewBag.Title = "AddWorkout";
+}
+
+<h2>AddWorkout</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Naam
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+@foreach (var item in Model.StandaardWorkouts) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Naam)
+        </td>
+        <td>
+            @Html.ActionLink("Add Workout", "AddWorkout", "Gebruiker", new { WorkoutId = item.WorkoutId, GebruikersId = 1  }, null)
+        </td>
+    </tr>
+}
+</table>
+
+
+<h2>Persoonlijke workouts</h2>
+<table class="table">
+    <tr>
+        <th>
+            Naam
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+    @foreach (var workout in Model.WorkoutsHuidigeGebruiker)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => workout.Naam)
+        </td>
+        <td>
+            @Html.ActionLink("Remove Workout", "RemoveWorkout", "Gebruiker", new { WorkoutId = workout.WorkoutId, GebruikersId = 1 }, null)
+        </td>
+    </tr>
+    }
+</table>
