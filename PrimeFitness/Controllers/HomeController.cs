@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BL;
+using Domain.Workout;
+using Domain.Gebruiker;
+using PrimeFitness.Models;
 
 namespace PrimeFitness.Controllers
 {
@@ -10,21 +14,22 @@ namespace PrimeFitness.Controllers
     {
         public ActionResult Index()
         {
+            WorkoutMgr workoutMgr = new WorkoutMgr();
+            GebruikerMgr gebruikerMgr = new GebruikerMgr();
             return View();
         }
 
-        public ActionResult About()
+        [HttpGet]
+        public ActionResult AddWorkout()
         {
-            ViewBag.Message = "Your application description page.";
+            WorkoutMgr workoutMgr = new WorkoutMgr();
+            GebruikerMgr gebruikerMgr = new GebruikerMgr();
+            AddWorkoutViewModel model = new AddWorkoutViewModel();
 
-            return View();
-        }
+            model.StandaardWorkouts = workoutMgr.AlleStandaardWorkouts();
+            model.WorkoutsHuidigeGebruiker = workoutMgr.AllPersonalWorkoutsOnGebruiker(1);
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(model);
         }
     }
 }

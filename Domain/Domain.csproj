@@ -49,6 +49,8 @@
     <Compile Include="Gebruiker\Gebruiker.cs" />
     <Compile Include="Workout\Oefening.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workout\PersonaliseerdeWorkout.cs" />
+    <Compile Include="Workout\StandaardWorkout.cs" />
     <Compile Include="Workout\Statistiek.cs" />
     <Compile Include="Gebruiker\Tip.cs" />
     <Compile Include="Uitdaging\Uitdaging.cs" />

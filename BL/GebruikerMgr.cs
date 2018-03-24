@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Domain.Gebruiker;
 
 namespace BL
 {
@@ -9,6 +10,16 @@ namespace BL
         public GebruikerMgr()
         {
             repo = new GebruikerRepo();
+        }
+
+        public Gebruiker FindGebruikerOnId(int id)
+        {
+            return repo.FindGebruikerOnId(id);
+        }
+
+        public void UpdateGebruiker(Gebruiker gebruiker)
+        {
+            repo.UpdateGebruiker(gebruiker);
         }
     }
 }

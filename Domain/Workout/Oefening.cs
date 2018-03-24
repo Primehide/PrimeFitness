@@ -9,6 +9,7 @@ namespace Domain.Workout
     public class Oefening
     {
         public int OefeningId { get; set; }
+        public string Naam { get; set; }
         public List<Statistiek> Statistieken { get; set; }
         public Enum.BodyPart BodyPart { get; set; }
         public Enum.OefeningType Type { get; set; }

@@ -4,15 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Enum
+namespace Domain.Workout
 {
-    public enum BodyPart
+    public class StandaardWorkout : Workout
     {
-        CHEST,
-        BICEPS,
-        TRICEPS,
-        LEGS,
-        BACK,
-        CORE
     }
 }
