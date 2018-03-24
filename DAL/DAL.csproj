@@ -47,7 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EF\FitnessContext.cs" />
+    <Compile Include="EF\FitnessInitialiser.cs" />
+    <Compile Include="GebruikerRepo.cs" />
+    <Compile Include="Interfaces\IGebruikerRepo.cs" />
+    <Compile Include="Interfaces\IUitdagingRepo.cs" />
+    <Compile Include="Interfaces\IWorkoutRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UitdagingRepo.cs" />
+    <Compile Include="WorkoutRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
@@ -55,9 +63,7 @@
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EF\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

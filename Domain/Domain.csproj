@@ -40,7 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\BodyPart.cs" />
+    <Compile Include="Enum\OefeningType.cs" />
+    <Compile Include="Gebruiker\Agenda.cs" />
+    <Compile Include="Uitdaging\Badge.cs" />
+    <Compile Include="Gebruiker\Duel.cs" />
+    <Compile Include="Enum\WorkoutType.cs" />
+    <Compile Include="Gebruiker\Gebruiker.cs" />
+    <Compile Include="Workout\Oefening.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workout\Statistiek.cs" />
+    <Compile Include="Gebruiker\Tip.cs" />
+    <Compile Include="Uitdaging\Uitdaging.cs" />
+    <Compile Include="Gebruiker\Vriend.cs" />
+    <Compile Include="Workout\Workout.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
